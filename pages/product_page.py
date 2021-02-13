@@ -8,9 +8,23 @@ import time
 class ProductPage(BasePage):
     def add_to_basket(self):
         button = self.browser.find_element(*ProductPageLocators.BASKET_BUTTON)
-        time.sleep(4)
         button.click()
         self.solve_quiz_and_get_code()
+        time.sleep(5)
+
+    def get_product_name(self):
+        name = self.browser.find_element(*ProductPageLocators.NAME)
+        return name.text
+
+    def get_success_product_price(self):
+        success_product_name = self.browser.find_element(*ProductPageLocators.SUCCESS_PRODUCT_NAME)
+        return success_product_name.text
+
+    def get_product_price(self):
+        price = self.browser.find_element(*ProductPageLocators.PRICE)
+        return price.text
+
+
 
     def solve_quiz_and_get_code(self):
         self.browser.implicitly_wait(3)
@@ -22,8 +36,8 @@ class ProductPage(BasePage):
         try:
             alert = self.browser.switch_to.alert
             alert_text = alert.text
-            time.sleep(3)
             print(f"Your code: {alert_text}")
             alert.accept()
         except NoAlertPresentException:
             print("No second alert presented")
+#
