@@ -52,3 +52,7 @@ class BasePage:
     def should_be_empty_basket(self):
         empty_basket = self.browser.find_element(*BasePageLocators.BASKET_EMPTY)
         assert empty_basket.text == 'Ваша корзина пуста Продолжить покупки', 'Корзина не пуста!!!!'
+
+    def should_be_authorized_user(self):
+        assert self.is_element_present(*BasePageLocators.USER_ICON), "User icon is not presented," \
+                                                                     " probably unauthorised user"

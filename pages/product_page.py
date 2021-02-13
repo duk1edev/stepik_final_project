@@ -16,7 +16,7 @@ class ProductPage(BasePage):
         name = self.browser.find_element(*ProductPageLocators.NAME)
         return name.text
 
-    def get_success_product_price(self):
+    def get_success_product_name(self):
         success_product_name = self.browser.find_element(*ProductPageLocators.SUCCESS_PRODUCT_NAME)
         return success_product_name.text
 
