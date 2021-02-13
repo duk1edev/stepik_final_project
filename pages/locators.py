@@ -3,6 +3,8 @@ from selenium.webdriver.common.by import By
 
 class MainPageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, '#login_link')
+    BASKET_LINK = (By.XPATH, '//*[@id="default"]/header/div[1]/div/div[2]/span/a')
+    BASKET_EMPTY = (By.XPATH, '/html/body/div[2]/div/div[3]/div[2]/p')
 
 
 class LoginPageLocators:
