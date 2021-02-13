@@ -31,4 +31,4 @@ class BasePageLocators:
     BASKET_LINK = (By.XPATH, '//*[@id="default"]/header/div[1]/div/div[2]/span/a')
     BASKET_EMPTY = (By.XPATH, '/html/body/div[2]/div/div[3]/div[2]/p')
     USER_ICON = (By.CSS_SELECTOR, ".icon-user")
-    USER_ICON = (By.CSS_SELECTOR, ".icon-user")
+
