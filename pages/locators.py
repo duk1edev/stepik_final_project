@@ -16,4 +16,9 @@ class ProductPageLocators:
     NAME = (By.CSS_SELECTOR, ".product_main > h1")
     PRICE = (By.CLASS_NAME, "price_color")
     SUCCESS_PRODUCT_NAME = (By.CSS_SELECTOR, '.alert-success .alertinner strong')
+    SUCCESS_MESSAGE = (By.CSS_SELECTOR, '.alert-success')
 
+
+class BasePageLocators:
+    LOGIN_LINK = (By.ID, "login_link")
+    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
