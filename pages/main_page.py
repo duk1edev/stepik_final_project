@@ -18,11 +18,5 @@ class MainPage(BasePage):
     def should_be_login_link(self):
         assert self.is_element_present(*MainPageLocators.LOGIN_LINK), 'Login link is not present'
 
-    def go_to_basket(self):
-        basket_link = self.browser.find_element(*MainPageLocators.BASKET_LINK)
-        basket_link.click()
 
-    def should_be_empty_basket(self):
-        empty_basket = self.browser.find_element(*MainPageLocators.BASKET_EMPTY)
-        assert empty_basket.text == 'Ваша корзина пуста Продолжить покупки', 'Корзина не пуста!!!!'
 
